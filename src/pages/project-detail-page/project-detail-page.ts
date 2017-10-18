@@ -42,6 +42,12 @@ export class ProjectDetailPage {
       this.project.countTasks = this.tasks.length;
       this.projectsProvider.updateProject(this.project);
     });
+
+    events.subscribe('task-edit', (newTask) => {
+      this.tasks = this.tasksProvider.getTasksForProject(this.project.id);
+      this.project.countTasks = this.tasks.length;
+      this.projectsProvider.updateProject(this.project);
+    });
   }
 
   ngOnDestroy() {
