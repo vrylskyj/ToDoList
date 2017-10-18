@@ -13,6 +13,9 @@ export class EditTaskPage {
 
   task: Task;
   projects: Array<Project>;
+  private priority;
+  private projectId;
+  private title;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -24,11 +27,18 @@ export class EditTaskPage {
     this.projectsProvider.getProjects().then((data) => {
       this.projects = data;
     });
+
+    this.projectId = this.task.projectId;
+    this.priority = this.task.priority;
+    this.title = this.task.title;
   }
 
   updateTask() {
-    this.tasksProvider.saveTask(this.task);
-    // this.events.publish('task-edit', this.task);
+    this.task.priority = parseInt(this.priority);
+    this.task.projectId = this.projectId;
+    this.task.title = this.title;
+    this.tasksProvider.updateTask(this.task);
+    this.events.publish('task-edit', this.task);
     this.navCtrl.pop();
   }
 

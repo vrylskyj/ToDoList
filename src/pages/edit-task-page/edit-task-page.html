@@ -50,8 +50,8 @@
       </ion-buttons>
       <ion-label>Project</ion-label>
       <ion-icon name="radio-button-off"></ion-icon>
-      <ion-select [(ngModel)]="colorCode">
-        <ion-option value="{{project.title}}" *ngFor="let project of projects">{{project.title}}</ion-option>
+      <ion-select [(ngModel)]="projectId">
+        <ion-option value="{{project.id}}" *ngFor="let project of projects">{{project.title}}</ion-option>
       </ion-select>
     </ion-item>
   </div>

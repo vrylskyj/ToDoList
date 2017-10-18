@@ -47,6 +47,12 @@ export class TasksProvider {
     this.dataService.save(this.tasks, 'tasks');
   }
 
+  updateTask(task:Task) {
+    let index = this.indexForTask(task);
+    this.tasks[index] = task;
+    this.dataService.save(this.tasks, 'projects');
+  }
+
   removeTask(task:Task) {
 
     let indexToRemove = -1;
@@ -64,7 +70,6 @@ export class TasksProvider {
 
   private getTasksForTheKey(key, value) {
 
-
     let tasks = [];
     for (let i = 0; i < this.tasks.length; i++) {
       let task = this.tasks[i];
@@ -73,6 +78,17 @@ export class TasksProvider {
       }
     }
     return tasks;
+  }
+
+
+
+  indexForTask(task) {
+    for (let i = 0; i < this.tasks.length; i++) {
+      if (this.tasks[i]['id'] === task.id) {
+        return i;
+      }
+    }
+    return -1;
   }
 
 }

@@ -9,9 +9,9 @@ enum Priority {
 
 export class Task {
 
-  public readonly title: string;
-  public readonly priority: Priority;
-  public readonly projectId: string;
+  public title: string;
+  public priority: Priority;
+  public projectId: string;
   public id: string;
 
   constructor(id:string, title: string, priority: Priority, projectId: string) {
