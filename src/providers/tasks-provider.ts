@@ -50,7 +50,7 @@ export class TasksProvider {
   updateTask(task:Task) {
     let index = this.indexForTask(task);
     this.tasks[index] = task;
-    this.dataService.save(this.tasks, 'projects');
+    this.dataService.save(this.tasks, 'tasks');
   }
 
   removeTask(task:Task) {
