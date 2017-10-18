@@ -1,0 +1,17 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>ColorPage</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="saveColor()">
+        Done
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class ="color-item" *ngFor="let color of colors" [ngClass] = "{selected: color === selectedColor}"
+       (click) = "selectColor(color)" [style.backgroundColor]="color">
+  </div>
+</ion-content>

@@ -1,4 +1,23 @@
 page-create-project-page {
-  //
+
+  .color-item {
+    position: relative;
+    height: 50px;
+
+    .color-title {
+      line-height: 50px;
+    }
+
+    .color-circle {
+      position: absolute;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      top: 15px;
+    }
+
+
+  }
 
 }

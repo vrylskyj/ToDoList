@@ -20,6 +20,7 @@ import {TasksMapper} from "../providers/tasks-mapper";
 import {UUID} from "angular2-uuid";
 import {FilteredTasksPage} from "../pages/filtered-tasks-page/filtered-tasks-page";
 import {EditTaskPage} from "../pages/edit-task-page/edit-task-page";
+import {ColorPage} from "../pages/color-page/color-page";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {EditTaskPage} from "../pages/edit-task-page/edit-task-page";
     CreateTaskPage,
     FilteredTasksPage,
     TabsPage,
-    EditTaskPage
+    EditTaskPage,
+    ColorPage
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import {EditTaskPage} from "../pages/edit-task-page/edit-task-page";
     CreateTaskPage,
     TabsPage,
     FilteredTasksPage,
+    ColorPage,
     EditTaskPage
   ],
   providers: [
