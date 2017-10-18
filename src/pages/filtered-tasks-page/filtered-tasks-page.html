@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Priority{{filteredPriority}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <p class="list-title">
+    Priority {{filteredPriority}}
+  </p>
+
+  <ion-list>
+    <ion-item  *ngFor="let task of filteredTasks" class="task-item">
+
+        <div class="task-priority" [ngStyle]="{'background-color': task.getColor()}"></div>
+        <div class="task-title">{{task.title}}</div>
+        <div class="task-separator"></div>
+        <div class=project-title>{{getProjectForId(task.projectId).title}}</div>
+        <div class="project-color" [style.background-color]="getProjectForId(task.projectId).colorCode">
+        </div>
+      </ion-item>
+  </ion-list>
+</ion-content>

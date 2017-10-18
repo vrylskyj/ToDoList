@@ -1,0 +1,45 @@
+
+<ion-header>
+  <ion-navbar [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goToBack()">
+        Cancel
+      </button>
+    </ion-buttons>
+    <ion-title align="center">New Project</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="saveProject()">
+        Done
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <div>
+   <ion-item>
+     <ion-input type="text" placeholder="New project name" [(ngModel)]="title"></ion-input>
+   </ion-item>
+ </div>
+  <div>
+    <ion-item>
+      <ion-buttons left>
+        <button ion-button icon-only>
+          <ion-icon name="ios-color-palette-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+        <ion-label>Color</ion-label>
+      <ion-icon name="radio-button-off"></ion-icon>
+        <ion-select [(ngModel)]="colorCode">
+          <ion-option value="red">Red</ion-option>
+          <ion-option value="orange">Orange</ion-option>
+          <ion-option value="yellow">Yellow</ion-option>
+          <ion-option value="green">Green</ion-option>
+          <ion-option value="blue">Blue</ion-option>
+          <ion-option value="black">Black</ion-option>
+        </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

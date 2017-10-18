@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar class="navbar">
+    <ion-buttons left>
+      <ion-icon name="contact" name="icon-contact" >
+      </ion-icon>
+    </ion-buttons>
+    <ion-title>
+      ToDoList
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item  (click) = "filterTasks(priority = 0)" tappable>
+      <button ion-button item-start icon-only>
+        <ion-icon name = "water" icon-start></ion-icon>
+      </button>
+    <ion-label>Priority Lowest</ion-label>
+      </ion-item>
+
+    <ion-item  (click) = "filterTasks(priority = 1)" tappable>
+      <button ion-button item-start icon-only>
+        <ion-icon name = "water" icon-start></ion-icon>
+      </button>
+      <ion-label>Priority Low</ion-label>
+    </ion-item>
+
+    <ion-item  (click) = "filterTasks(priority = 2)" tappable>
+      <button ion-button item-start icon-only>
+        <ion-icon name = "water" icon-start></ion-icon>
+      </button>
+      <ion-label>Priority Mid</ion-label>
+    </ion-item>
+
+    <ion-item  (click) = "filterTasks(priority = 3)" tappable>
+      <button ion-button item-start icon-only>
+        <ion-icon name = "water" icon-start></ion-icon>
+      </button>
+      <ion-label>Priority High</ion-label>
+    </ion-item>
+
+
+
+  </ion-list>
+
+</ion-content>

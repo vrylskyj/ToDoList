@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar class="navbar">
+    <ion-buttons left>
+      <ion-icon name="contact" name="icon-contact" >
+      </ion-icon>
+    </ion-buttons>
+    <ion-title>
+      ToDoList
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <div *ngIf="projects.length == 0" margin="auto">No projects at the moment</div>
+    <ion-item *ngFor="let project of projects" class="project-item">
+      <ion-label class = "circle-width">
+        <div class = "circle" [style.background-color]="project.colorCode"></div>
+       </ion-label>
+      <ion-label (click)="viewDetailProject(project)" tappable>
+        {{project.title}}</ion-label>
+      <ion-label fixed class = "task-count">{{project.countTasks}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-icon class="add-project-button" ios="md-add" md="md-add" (click)="addProject()"> Add project </ion-icon>
+</ion-content>
+
+
+
+
+
+
+

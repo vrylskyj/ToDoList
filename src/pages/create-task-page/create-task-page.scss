@@ -1,0 +1,30 @@
+page-create-task-page {
+
+  .text-priority {
+    width: 60px;
+  }
+
+  .priority-item {
+
+    .priority-icon {
+      display: inline-block;
+    }
+
+    .priority-text {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .priority-segment {
+      display: inline-block;
+      width: 70%;
+      margin-left: 30px;
+
+      .segment-button {
+        border: 0 !important;
+      }
+    }
+  }
+
+
+}

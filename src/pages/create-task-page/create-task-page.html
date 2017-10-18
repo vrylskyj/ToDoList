@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goToBack()">
+        Cancel
+      </button>
+    </ion-buttons>
+    <ion-title align="center">New Task</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="saveTask()">
+        Done
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-input type="text" placeholder="New task name" [(ngModel)]="title"></ion-input>
+  <div class="priority-item">
+    <div class = "priority-icon">
+      <ion-icon name="ios-color-palette-outline"></ion-icon>
+    </div>
+
+    <div class = "priority-text">Priority</div>
+    <div class = "priority-segment">
+      <ion-segment [(ngModel)]="priority" color="secondary">
+        <ion-segment-button value="0">
+          Lowest
+        </ion-segment-button>
+        <ion-segment-button value="1">
+          Low
+        </ion-segment-button>
+        <ion-segment-button value="2">
+          Mid
+        </ion-segment-button>
+        <ion-segment-button value="3">
+          High
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+</ion-content>
+
+
+
+
+

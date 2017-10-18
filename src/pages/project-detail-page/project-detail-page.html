@@ -1,0 +1,37 @@
+
+<ion-header>
+  <ion-navbar [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goToBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list class = "list-tasks">
+    <div *ngIf="tasks.length ==0" margin="auto">No tasks at the moment</div>
+    <ion-item-sliding  *ngFor="let task of tasks" >
+      <ion-item class="task-item">
+          <div class="task-priority"  [ngStyle]="{'background-color': task.getColor()}"></div>
+          <div class="task-title">{{task.title}}</div>
+          <div class="task-separator"></div>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button (click)="doneTask(task)">Done</button>
+        <button ion-button color="danger" (click)="editTask(task)">Edit</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom padding>
+    <button ion-fab mini color="danger" (click)="addTask()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

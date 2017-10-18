@@ -1,0 +1,63 @@
+
+<ion-header>
+  <ion-navbar [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goToBack()">
+        Cancel
+      </button>
+    </ion-buttons>
+    <ion-title align="center">{{task.title}}</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="updateTask()">
+        Done
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-input type="text" placeholder={{task.title}} [(ngModel)]="title"></ion-input>
+  <div class="priority-item">
+    <div class = "priority-icon">
+      <ion-icon name="ios-color-palette-outline"></ion-icon>
+    </div>
+
+    <div class = "priority-text">Priority</div>
+    <div class = "priority-segment">
+      <ion-segment [(ngModel)]="priority" color="secondary">
+        <ion-segment-button value=0>
+          Lowest
+        </ion-segment-button>
+        <ion-segment-button value=1>
+          Low
+        </ion-segment-button>
+        <ion-segment-button value=2>
+          Mid
+        </ion-segment-button>
+        <ion-segment-button value=3>
+          High
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div>
+    <ion-item>
+      <ion-buttons left>
+        <button ion-button icon-only>
+          <ion-icon name="briefcase"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-label>Project</ion-label>
+      <ion-icon name="radio-button-off"></ion-icon>
+      <ion-select [(ngModel)]="colorCode">
+        <ion-option value="{{project.title}}" *ngFor="let project of projects">{{project.title}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>
+
+
+
+
+

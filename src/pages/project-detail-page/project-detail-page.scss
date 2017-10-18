@@ -1,0 +1,33 @@
+page-project-detail-page {
+
+  .task-item {
+    position: relative;
+    height: 50px;
+
+    .task-title {
+      height: 100%;
+      line-height: 50px;
+      margin-left: 15px;
+    }
+
+    .task-priority {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 5px;
+     // background-color: red;
+    }
+
+    .task-separator {
+      width: 100%;
+      background-color: lightgray;
+      height: 1px;
+      margin-left: 15px;
+    }
+  }
+
+ion-title{
+  text-align: center;
+}
+
+}
